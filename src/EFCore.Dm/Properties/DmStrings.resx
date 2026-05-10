@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ===== DmStrings.cs exception/validation message strings ===== -->
+
+  <data name="AlterIdentityColumn" xml:space="preserve">
+    <value>Changing the value of an identity column is not supported.</value>
+  </data>
+
+  <data name="DuplicateColumnNameValueGenerationStrategyMismatch" xml:space="preserve">
+    <value>'{entityType1}.{property1}' and '{entityType2}.{property2}' are both mapped to column '{columnName}' in '{table}' but are configured with different value generation strategies.</value>
+  </data>
+
+  <data name="FunctionOnClient" xml:space="preserve">
+    <value>The '{methodName}' method is not supported because the query has switched to client-evaluation. Inspect the log to determine which query expressions are triggering client-evaluation.</value>
+  </data>
+
+  <data name="IdentityBadType" xml:space="preserve">
+    <value>Identity value generation cannot be used for the property '{property}' on entity type '{entityType}' because the property type is '{propertyType}'. Identity value generation can only be used with signed integer properties.</value>
+  </data>
+
+  <data name="IndexTableRequired" xml:space="preserve">
+    <value>Index '{index}' on entity type '{entityType}' requires a mapped table.</value>
+  </data>
+
+  <data name="InvalidColumnNameForFreeText" xml:space="preserve">
+    <value>The FreeText method does not support columns of type '{dataType}'.</value>
+  </data>
+
+  <data name="InvalidTableToIncludeInScaffolding" xml:space="preserve">
+    <value>The specified table '{table}' is not valid. Specify tables using the format '[schema].[table]'.</value>
+  </data>
+
+  <data name="MultipleIdentityColumns" xml:space="preserve">
+    <value>Cannot use table '{table}' for entity type because its primary key includes multiple identity columns: {properties}.</value>
+  </data>
+
+  <data name="NonKeyValueGeneration" xml:space="preserve">
+    <value>The property '{property}' on entity type '{entityType}' is configured to use 'SequenceHiLo' value generator, which is only intended for keys. If this was intentional configure an alternate key on the property, otherwise call 'ValueGeneratedNever' or configure store generation for this property.</value>
+  </data>
+
+  <data name="NoUserId" xml:space="preserve">
+    <value>A user ID must be specified in the connection string.</value>
+  </data>
+
+  <data name="SequenceBadType" xml:space="preserve">
+    <value>DM sequences cannot be used to generate values for the property '{property}' on entity type '{entityType}' because the property type is '{propertyType}'. Sequences can only be used with integer properties.</value>
+  </data>
+
+  <data name="TransientExceptionDetected" xml:space="preserve">
+    <value>An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseDm' call.</value>
+  </data>
+
+  <data name="UnqualifiedDataType" xml:space="preserve">
+    <value>The data type '{dataType}' used for a column is not fully qualified. Explicitly set the data type to something like 'varchar(100)', 'decimal(5, 2)', 'int', etc.</value>
+  </data>
+
+  <data name="UnqualifiedDataTypeOnProperty" xml:space="preserve">
+    <value>The data type '{dataType}' used for property '{property}' is not fully qualified. Explicitly set the data type to something like 'varchar(100)', 'decimal(5, 2)', 'int', etc.</value>
+  </data>
+
+  <!-- ===== DmResources.cs log event format strings ===== -->
+
+  <data name="LogByteIdentityColumn" xml:space="preserve">
+    <value>The property '{property}' on entity type '{entityType}' is of type 'byte', but is configured to use a DM identity column. This requires that values starting at 255 and counting downward will be used for seeding. Make sure that your seed data does not contain negative values and that no other columns in the table use such values, otherwise the database may reject the values and the model may become inconsistent.</value>
+    <comment>Warning DmEventId.ByteIdentityColumnWarning string string</comment>
+  </data>
+
+  <data name="LogConflictingValueGenerationStrategies" xml:space="preserve">
+    <value>The property '{property}' on entity type '{entityType}' is configured with conflicting value generation strategies ('{strategy1}' and '{strategy2}'). Only one value generation strategy can be applied at a time.</value>
+    <comment>Warning DmEventId.ConflictingValueGenerationStrategiesWarning string string string string</comment>
+  </data>
+
+  <data name="LogDefaultDecimalTypeColumn" xml:space="preserve">
+    <value>No type was specified for the decimal column '{property}' on entity type '{entityType}'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the DM column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.</value>
+    <comment>Warning DmEventId.DecimalTypeDefaultWarning string string</comment>
+  </data>
+
+  <data name="LogFoundColumn" xml:space="preserve">
+    <value>Found column with table: {tableName}, column name: {columnName}, data type: {dataType}, nullable: {isNullable}, identity: {isIdentity}, default value: {defaultValue}, computed value: {computedValue}.</value>
+    <comment>Debug DmEventId.ColumnFound string string string bool bool string string</comment>
+  </data>
+
+  <data name="LogFoundDefaultSchema" xml:space="preserve">
+    <value>Found default schema: {defaultSchema}.</value>
+    <comment>Debug DmEventId.DefaultSchemaFound string</comment>
+  </data>
+
+  <data name="LogFoundForeignKey" xml:space="preserve">
+    <value>Found foreign key on table: {tableName}, name: {foreignKeyName}, principal table: {principalTableName}, delete action: {deleteAction}.</value>
+    <comment>Debug DmEventId.ForeignKeyFound string string string string</comment>
+  </data>
+
+  <data name="LogFoundIndex" xml:space="preserve">
+    <value>Found index with name: {indexName}, table: {tableName}, is unique: {isUnique}.</value>
+    <comment>Debug DmEventId.IndexFound string string bool</comment>
+  </data>
+
+  <data name="LogFoundPrimaryKey" xml:space="preserve">
+    <value>Found primary key with name: {primaryKeyName}, table: {tableName}.</value>
+    <comment>Debug DmEventId.PrimaryKeyFound string string</comment>
+  </data>
+
+  <data name="LogFoundSequence" xml:space="preserve">
+    <value>Found sequence name: {name}, data type: {dataType}, cyclic: {isCyclic}, increment: {increment}, start: {start}, minimum: {min}, maximum: {max}.</value>
+    <comment>Debug DmEventId.SequenceFound string string bool int long long long</comment>
+  </data>
+
+  <data name="LogFoundTable" xml:space="preserve">
+    <value>Found table with name: {name}.</value>
+    <comment>Debug DmEventId.TableFound string</comment>
+  </data>
+
+  <data name="LogFoundUniqueConstraint" xml:space="preserve">
+    <value>Found unique constraint with name: {uniqueConstraintName}, table: {tableName}.</value>
+    <comment>Debug DmEventId.UniqueConstraintFound string string</comment>
+  </data>
+
+  <data name="LogMissingSchema" xml:space="preserve">
+    <value>Unable to find a schema in the database matching the selected schema {schema}.</value>
+    <comment>Warning DmEventId.MissingSchemaWarning string</comment>
+  </data>
+
+  <data name="LogMissingTable" xml:space="preserve">
+    <value>Unable to find a table in the database matching the selected table {table}.</value>
+    <comment>Warning DmEventId.MissingTableWarning string</comment>
+  </data>
+
+  <data name="LogPrincipalColumnNotFound" xml:space="preserve">
+    <value>For foreign key {foreignKeyName} on table {tableName}, unable to find the column called {principalColumnName} on the foreign key's principal table, {principalTableName}. Skipping foreign key.</value>
+    <comment>Warning DmEventId.ForeignKeyPrincipalColumnMissingWarning string string string string</comment>
+  </data>
+
+  <data name="LogPrincipalTableNotInSelectionSet" xml:space="preserve">
+    <value>For foreign key {fkName} on table {tableName}, unable to model the end of the foreign key on principal table {principalTableName}. This is usually because the principal table was not included in the selection set.</value>
+    <comment>Warning DmEventId.ForeignKeyReferencesMissingPrincipalTableWarning string string string</comment>
+  </data>
+
+</root>

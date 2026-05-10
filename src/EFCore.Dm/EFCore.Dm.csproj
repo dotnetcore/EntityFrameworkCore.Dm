@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<AssemblyName>DotNetCore.EntityFrameworkCore.Dm</AssemblyName>
+		<RootNamespace>DotNetCore.EntityFrameworkCore.Dm</RootNamespace>
+		<TargetFramework>net10.0</TargetFramework>
+		<Version>10.0.0</Version>
+		<Description>Dm provider for Entity Framework Core.</Description>
+		<PackageTags>Dm;Entity Framework Core;entity-framework-core;ef;efcore;orm;sql</PackageTags>
+		<LangVersion>Preview</LangVersion>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<Nullable>disable</Nullable>
+		<NoWarn>$(NoWarn);EF1001;NU1507;CS8632;CS0672</NoWarn>
+		<Authors>NCC;Jeffcky</Authors>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/dotnetcore/EntityFrameworkCore.Dm</RepositoryUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesAssemblyToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="..\Shared\*.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<Target Name="CopyProjectReferencesAssemblyToPackage">
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="Lib\DM.DmProvider.dll">
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+		</ItemGroup>
+	</Target>
+
+	<ItemGroup>
+		<Reference Include="DM.DmProvider">
+			<HintPath>Lib\DM.DmProvider.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\DmStrings.resx">
+			<LogicalName>Microsoft.EntityFrameworkCore.Dm.Properties.DmStrings.resources</LogicalName>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>

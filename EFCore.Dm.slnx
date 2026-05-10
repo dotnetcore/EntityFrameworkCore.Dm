@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/EFCore.Dm/EFCore.Dm.csproj" />
+  </Folder>
+</Solution>
