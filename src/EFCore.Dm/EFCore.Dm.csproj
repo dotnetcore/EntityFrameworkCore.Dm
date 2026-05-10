@@ -16,6 +16,9 @@
 		<RepositoryUrl>https://github.com/dotnetcore/EntityFrameworkCore.Dm</RepositoryUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesAssemblyToPackage</TargetsForTfmSpecificBuildOutput>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/dotnetcore/EntityFrameworkCore.Dm</PackageProjectUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -28,6 +31,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="..\..\icon.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
 		<None Include="README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
