@@ -19,6 +19,7 @@
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageLicenseFile>License.txt</PackageLicenseFile>
 		<PackageProjectUrl>https://github.com/dotnetcore/EntityFrameworkCore.Dm</PackageProjectUrl>
+		<Copyright>License.txt</Copyright>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -31,7 +32,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Include="..\..\License.txt" Link="License.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<None Include="..\..\icon.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\License.txt">
 		  <Pack>True</Pack>
 		  <PackagePath>\</PackagePath>
 		</None>
