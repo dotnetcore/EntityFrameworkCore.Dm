@@ -1,5 +1,9 @@
 # Entity Framework Core provider for Dm
 
+[![Member project of .NET Core Community](https://img.shields.io/badge/member%20project%20of-NCC-9e20c9.svg)](https://github.com/dotnetcore) 
+[![nuget](https://img.shields.io/nuget/v/DotNetCore.EntityFrameworkCore.Dm.svg?style=flat-square)](https://www.nuget.org/packages/DotNetCore.EntityFrameworkCore.Dm) 
+[![stats](https://img.shields.io/nuget/dt/DotNetCore.EntityFrameworkCore.Dm.svg?style=flat-square)](https://www.nuget.org/stats/packages/DotNetCore.EntityFrameworkCore.Dm?groupby=Version) 
+
 DotNetCore.EntityFrameworkCore.Dm is the open source EF Core provider for Dm. It allows you to interact with Dm via the most widely-used .NET O/RM from Microsoft, and use familiar LINQ syntax to express queries. It's built on top of [Dm](https://github.com/dotnetcore/EntityFrameworkCore.Dm).
 
 The provider looks and feels just like any other Entity Framework Core provider. Here's a quick sample to get you started:
